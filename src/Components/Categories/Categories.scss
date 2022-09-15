@@ -1,0 +1,37 @@
+@import '../../shared/colors.scss';
+@import '../../shared/vars.scss';
+
+.services {
+  margin-bottom: 30px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    // width: 100%;
+    padding: 46px 0;
+    &:hover {
+    }
+  }
+  &__item + &__item {
+    padding-left: 54px;
+  }
+  &__item-link {
+    white-space: nowrap;
+    @extend %medium;
+    line-height: 30px;
+    font-size: 26px;
+    transition: all 0.3s;
+  }
+  &__item-link:hover {
+    // font-weight: 700;
+    text-shadow: 0 0 0.9px #1181b2, 0 0 0.9px #1181b2;
+    color: #1181b2;
+  }
+  &__line {
+    opacity: 0.23;
+    color: #9795a6;
+    background-color: #9795a6;
+    height: 1px;
+  }
+}

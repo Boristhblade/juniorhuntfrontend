@@ -1,10 +1,18 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
+import { Banner } from './Components/Banner'
+import { Cards } from './Components/Cards'
+import { Categories } from './Components/Categories'
 import { Header } from './Components/Header'
 
 export const App: React.FC = () => {
   return (
-    <Header />
+    <>
+      <Header />
+      <Banner />
+      <Categories />
+      <Cards />
+    </>
   )
 }
 
