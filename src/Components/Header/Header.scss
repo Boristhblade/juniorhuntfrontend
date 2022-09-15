@@ -1,0 +1,74 @@
+@import '../../shared/colors.scss';
+@import '../../shared/vars.scss';
+
+.header {
+  height: 100px;
+  margin-bottom: 50px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding: 40px 236px 40px 58px;
+  }
+  &__search {
+    width: 662px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: $bg-white;
+    border: 1px solid $neutral-3;
+    position: relative;
+    border-radius: 40px;
+    transition: all 0.3s;
+    &:hover {
+      border-color: $bg-main;
+    }
+    &__account{
+      // justify-content: flex-end;
+    }
+  }
+}
+.search-form {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    padding: 22px 18px;
+  }
+
+  &__btn {
+    background-color: $bg-main;
+    box-shadow: 0px 4px 20px rgba(17, 129, 178, 0.25);
+    border-radius: 32px;
+    width: 139px;
+    height: 40px;
+    border: 1px solid $bg-main;
+    @extend %bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: $font-white;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $bg-black;
+      color: $font-white;
+      border-color: $bg-black;
+    }
+  }
+  &__input {
+    border: none;
+    background-color: $bg-white;
+    outline: none;
+    caret-color: $font-blue;
+  }
+  &__input::placeholder {
+    @extend %regular;
+    font-size: 14px;
+    line-height: 16px;
+    color: $neutral-1;
+  }
+}
