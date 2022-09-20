@@ -232,7 +232,7 @@ details summary::marker {
   position: absolute;
   width: 21px;
   height: 21px;
-  left: 3px;
+  left: 4px;
   background-image: url('../images/plus.svg');
   transition: all 0.3s;
 }
@@ -365,14 +365,83 @@ html .ui-button.ui-state-disabled:active {
   color: #333333;
 }
 
-//
 .cards-content {
   margin: 92px 68px 100px 62px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 100px 46px;
+  &__up {
+    position: absolute;
+    right: 3%;
+    top: 0;
+    cursor: pointer;
+    @extend %regular;
+    line-height: 16px;
+    font-size: 14px;
+    user-select: none;
+  }
+  &__sort {
+    &-text.transform {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+    &-text {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 8.02px;
+        // background-color: #212221;
+        background-image: url('../images/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 11px;
+        transform: rotate(-180deg);
+        top: 18px;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__hidden {
+    width: 183px;
+    height: 132px;
+    background: #fbfafa;
+    box-shadow: 4px 4px 30px 6px #eae7ea;
+    border-radius: 12px;
+    position: absolute;
+    right: 10%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    transition: all 0.3s;
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__hidden-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__hidden-item {
+    @extend %regular;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 16px 6px 16px;
+    width: 100%;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #deeef4;
+      color: #1181b2;
+    }
+  }
 }
+
 .card {
   max-width: 300px;
   max-height: 419px;
