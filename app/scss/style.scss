@@ -671,7 +671,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .profile {
   &__header {
-    width: 1312px;
+    max-width: 1312px;
     height: 228px;
     border: 1px solid rgba(#26ace2, 0.23);
     border-radius: 12px;
