@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://fonts.cdnfonts.com/css/gt-walsheim-pro"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a class="logo__link" href="index.html">
+              <img class="logo__img" src="images/logo.svg" />
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="search-form" action="#">
+              <img class="search-form__icon" src="images/search.svg" />
+              <input
+                class="search-form__input"
+                placeholder="Поиск по ключевому слову"
+                type="text"
+              />
+              <button class="search-form__btn">Искать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <blockquote class="blockquote"></blockquote>
+    <section class="tab">
+      <div class="container">
+        <div class="tabs">
+          <button class="tabs-link" onclick="openTab(event, 'main')">
+            Главная
+          </button>
+          <button
+            class="tabs-link active active"
+            onclick="openTab(event, 'profile')"
+            id="defaultOpen"
+          >
+            Мой профиль
+          </button>
+          <button class="tabs-link" onclick="openTab(event, 'reservations')">
+            Бронирования
+          </button>
+          <button class="tabs-link" onclick="openTab(event, 'messages')">
+            Сообщения
+          </button>
+        </div>
+        <div id="main" class="tab-content main"></div>
+        <div id="profile" class="tab-content profile">
+          <div class="profile__header">
+            <img
+              class="profile__header-img"
+              src="images/account.png"
+              alt="account"
+            />
+            <div class="profile__header-info">
+              <h3 class="profile__header-text">Zmicer Malewicz</h3>
+              <a href="#" class="profile__header-btn">Редактировать профиль</a>
+            </div>
+          </div>
+          <div class="profile__main">
+            <ul class="profile__main-list">
+              <li class="profile__main-item">
+                <p class="profile__main-name">Роль</p>
+                <p class="profile__main-descr">IT Recruiter at StarSoft</p>
+              </li>
+              <li class="profile__main-item">
+                <p class="profile__main-name">Языки</p>
+                <p class="profile__main-lang">Английский</p>
+                <p class="profile__main-lang">Испанский</p>
+              </li>
+              <li class="profile__main-item">
+                <p class="profile__main-name">Способы связи со мной</p>
+                <p class="profile__main-social">
+                  <img
+                    class="profile__main-social__img"
+                    src="images/linkedin.svg"
+                    alt="linkedin"
+                  />
+                </p>
+                <p class="profile__main-social">
+                  <img
+                    class="profile__main-social__img"
+                    src="images/telegram.svg"
+                    alt="telegram"
+                  />
+                </p>
+                <button class="profile__main-btn btn">Добавить</button>
+              </li>
+              <li class="profile__main-item">
+                <p class="profile__main-name">Обо мне</p>
+                <textarea
+                  class="profile__main-textarea"
+                  type="textarea"
+                  value="Hi! My name’s Zmicer. I work for a company called StarSoft. We’re looking for bright, innovative individuals who want to make a difference. "
+                ></textarea>
+              </li>
+              <li class="profile__main-item">
+                <p class="profile__main-name">Ищу кандидатов со скиллами</p>
+                <div class="profile__main-box">
+                  <div class="profile__main-skillbox">
+                    <p class="profile__main-title">Hard skills</p>
+                    <p class="profile__main-skill">Prototypings</p>
+                    <p class="profile__main-skill">Design Thinking</p>
+                    <p class="profile__main-skill">Wireframing</p>
+                    <button class="profile__main-btn btn">Добавить</button>
+                  </div>
+
+                  <div class="profile__main-skillbox">
+                    <p class="profile__main-title">Soft skills</p>
+                    <p class="profile__main-skill">Communication</p>
+                    <p class="profile__main-skill">Empathy</p>
+                    <button class="profile__main-btn btn">Добавить</button>
+                  </div>
+
+                  <div class="profile__main-skillbox">
+                    <p class="profile__main-title">Tools</p>
+                    <p class="profile__main-skill">Figma</p>
+                    <p class="profile__main-skill">Creative Suite</p>
+                    <button class="profile__main-btn btn">Добавить</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="profile__main-work">
+              <h4 class="profile__main-work__title">Work Experience</h4>
+              <div class="profile__main-work__content">
+                <div class="profile__main-work__content-left">
+                  <img
+                    src="images/workPic.png"
+                    alt="workpic"
+                    class="profile__main-work__content-img"
+                  />
+                  <div class="profile__main-work__content-box">
+                    <p class="profile__main-work__content-title">
+                      IT Recruiter
+                    </p>
+                    <p class="profile__main-work__content-text">StarSoft</p>
+                    <img
+                      class="profile__main-work__content-textImg"
+                      alt="dot"
+                      src="images/dot.svg"
+                    />
+                    <p class="profile__main-work__content-text">Full-time</p>
+                  </div>
+                </div>
+                <div class="profile__main-work__content-right">
+                  <p class="profile__main-work__content-right__text">
+                    Dec 2020 — Present
+                  </p>
+                </div>
+              </div>
+              <button class="profile__main-workbtn btn">Добавить</button>
+            </div>
+            <div class="profile__main-work">
+              <h4 class="profile__main-work__title">Education</h4>
+              <div class="profile__main-work__content">
+                <div class="profile__main-work__content-left">
+                  <img
+                    src="images/workPic.png"
+                    alt="workpic"
+                    class="profile__main-work__content-img"
+                  />
+                  <div class="profile__main-work__content-box">
+                    <p class="profile__main-work__content-title">
+                      University of Gdansk
+                    </p>
+                    <p class="profile__main-work__content-text">Management</p>
+                    <img
+                      class="profile__main-work__content-textImg"
+                      alt="dot"
+                      src="images/dot.svg"
+                    />
+                    <p class="profile__main-work__content-text">
+                      Bachelor’s degree
+                    </p>
+                  </div>
+                </div>
+                <div class="profile__main-work__content-right">
+                  <p class="profile__main-work__content-right__text">
+                    Dec 2020 — Dec 2020
+                  </p>
+                </div>
+              </div>
+              <button class="profile__main-workbtn btn">Добавить</button>
+            </div>
+          </div>
+        </div>
+        <div id="reservations" class="tab-content"></div>
+        <div id="messages" class="tab-content"></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <hr class="line" />
+        <div class="footer__inner">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">Product Managers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">Project Managers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">UX/UI Designers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">Backend</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">Frontend</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">Marketing</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-text">QA</a>
+            </li>
+          </ul>
+          <p class="footer__copyright">Copyright 2022 - IT Hunt</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/main.min.js"></script>
+</html>

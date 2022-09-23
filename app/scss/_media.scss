@@ -189,19 +189,20 @@
 @media (max-width: 474px) {
   .header__inner {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .header__logo {
     order: -1;
     padding: 28px 22px 23px 30%;
   }
   .logo__img {
-    right: 41%;
+    right: 38%;
     position: absolute;
     top: 13px;
   }
   .header__account {
-    order: -1;
-    margin-bottom: 20px;
+    // order: -1;
+    // margin-bottom: 20px;
     margin-top: 5px;
   }
   .search-form__icon {
