@@ -166,6 +166,9 @@
   }
 }
 @media (max-width: 717px) {
+  .cards-content__up {
+    right: 6%;
+  }
 }
 @media (max-width: 696px) {
   .tabs {
@@ -316,8 +319,10 @@
   .cards-side__inner {
     margin-bottom: 0px !important;
   }
+
   .cards-content__up {
-    top: 17.8%;
+    top: -8px;
+    right: 9%;
   }
 }
 @media (max-width: 495px) {
@@ -411,9 +416,10 @@
     font-size: 15px;
     line-height: 23px;
   }
+
   .profile__main-work__content-text {
     font-size: 13px;
-    line-height: 5px;
+    line-height: 12px;
   }
 }
 @media (max-width: 420px) {
@@ -512,7 +518,7 @@
 }
 @media (max-width: 370px) {
   .logo__img {
-    right: 37%;
+    right: 35%;
   }
 }
 @media (max-width: 330px) {
