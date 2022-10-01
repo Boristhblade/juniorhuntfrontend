@@ -243,7 +243,7 @@
   &-work__content {
     display: flex;
     justify-content: space-between;
-    max-width: 648px;
+    max-width: 978px;
     max-height: 143px;
     border: 1px solid rgba(#747473, 0.23);
     border-radius: 10px;
@@ -255,6 +255,32 @@
     display: flex;
     align-items: center;
     padding: 38px 26px;
+    max-width: 390px;
+  }
+  &-work__content-workedit,
+  &-work__content-eduedit {
+    position: relative;
+    &__btn {
+      @extend %bold;
+      color: #828282;
+      padding: 14px 15px 15px 43px;
+      background: #fbfafa;
+      border: 1px solid #eae7ea;
+      border-radius: 32px;
+      font-size: 16px;
+      line-height: 18px;
+      margin-right: 20px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/edit.svg');
+        top: 10px;
+        left: 17px;
+      }
+    }
   }
 
   &-work__content-img {
@@ -295,7 +321,164 @@
   &-workbtn {
     position: absolute;
     position: absolute;
-    right: 47.7%;
+    right: 23.7%;
     bottom: -70px;
   }
+}
+.profile__main-work__content-eduhidden,
+.profile__main-work__content-workhidden {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: 649px;
+  max-height: 898px;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 30px;
+  right: 129px;
+  bottom: 40px;
+  transform: translateY(200%);
+  box-shadow: 0px 8px 20px #eae7ea;
+  transition: transform 0.3s;
+  &--active {
+    transform: translateY(0);
+  }
+  &__inner {
+    padding: 74px 70px;
+  }
+  &__title {
+    @extend %bold;
+    font-size: 32px;
+    line-height: 37px;
+    width: 429px;
+    margin-bottom: 91px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    @extend %medium;
+    font-size: 18px;
+    line-height: 21px;
+    color: #747473;
+    margin-bottom: 21px;
+  }
+  &__input {
+    background: #ffffff;
+    border: 1px solid #eae7ea;
+    border-radius: 16px;
+    max-width: 429px;
+    margin-bottom: 51px;
+    height: 43px;
+    outline: none;
+    transition: all 0.3s;
+    padding-left: 10px;
+    &:hover {
+      border-color: #26ace2;
+    }
+    &:focus {
+      border-color: #26ace2;
+    }
+  }
+  &__select {
+    max-width: 429px;
+    background: #ffffff;
+    border: 1px solid #eae7ea;
+    border-radius: 16px;
+    height: 43px;
+    margin-bottom: 51px;
+    outline: none;
+    padding-left: 10px;
+    transition: all 0.3s;
+    &:hover {
+      border-color: #26ace2;
+    }
+    &-option {
+      font-size: 18px;
+      line-height: 23px;
+      // height: 100px;
+    }
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+  &__checkbox {
+    margin-right: 16px;
+
+    width: 21px;
+    height: 21px;
+    opacity: 0;
+    z-index: 10;
+    position: relative;
+    & + label::before {
+      content: '';
+
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: 1px solid #747473;
+      border-radius: 3px;
+    }
+    &:checked + label::before {
+      border: 1px solid #26ace2;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 5.82143L3.63158 8.5L11 1' stroke='%231181B2' stroke-width='2'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__checkbox-label {
+    @extend %medium;
+    font-size: 16px;
+    line-height: 18px;
+    color: #747473;
+  }
+  &__btnbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    &__save {
+      width: 201px;
+      height: 48px;
+      background: #1181b2;
+      border: 1px solid #1181b2;
+      border-radius: 32px;
+      color: #fbfafa;
+      font-size: 16px;
+      line-height: 18px;
+      @extend %bold;
+      padding: 14px 56px;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #000;
+        border: 1px solid #000;
+      }
+    }
+    &__del {
+      border: 1px solid #747473;
+      border-radius: 32px;
+      background: rgba(#fbfafa, 0.4);
+      font-size: 16px;
+      line-height: 18px;
+      @extend %bold;
+      padding: 14px 56px;
+      color: #000;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 8px 20px #eae7ea;
+      }
+    }
+  }
+}
+.profile__main-work__content-eduhidden {
+  bottom: 43px;
 }

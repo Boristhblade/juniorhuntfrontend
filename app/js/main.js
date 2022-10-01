@@ -26,11 +26,20 @@ $(function () {
   })
   $('.cards-content__hidden-link').on('click', function () {
     $('.cards-content__hidden').removeClass('cards-content__hidden--active')
-    console.log(1)
+    // console.log(1)
   })
 
   $('.cards-content__sort-text').on('click', function () {
     $(this).toggleClass('transform')
+  })
+
+  $('.profile__main-work__content-workedit__btn').on('click', function () {
+    // console.log(1)
+    $('.profile__main-work__content-workhidden').toggleClass('profile__main-work__content-workhidden--active')
+  })
+  $('.profile__main-work__content-eduedit__btn').on('click', function () {
+    // console.log(1)
+    $('.profile__main-work__content-eduhidden').toggleClass('profile__main-work__content-eduhidden--active')
   })
 
   $('#slider-range').slider({
@@ -43,12 +52,7 @@ $(function () {
       $('#amount2').text('€' + ui.values[1] + 'K')
     },
   })
-  $('#amount').val(
-    '$' +
-      $('#slider-range').slider('values', 0) +
-      ' - $' +
-      $('#slider-range').slider('values', 1)
-  )
+  $('#amount').val('$' + $('#slider-range').slider('values', 0) + ' - $' + $('#slider-range').slider('values', 1))
 })
 
 function openTab(evt, tabName) {
@@ -69,5 +73,5 @@ function openTab(evt, tabName) {
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = 'block'
-  evt.currentTarget.className += ' active'
+  evt.target.className += ' active'
 }

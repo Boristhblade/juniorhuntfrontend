@@ -25,7 +25,10 @@
     border-radius: 40px;
     transition: all 0.3s;
     &:hover {
-      border-color: #1181b2;
+      border-color: #26ace2;
+    }
+    &:focus {
+      border-color: #26ace2;
     }
   }
   &__account {
