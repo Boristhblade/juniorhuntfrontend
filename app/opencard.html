@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="http://fonts.cdnfonts.com/css/gt-walsheim-pro"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="http://fonts.cdnfonts.com/css/gt-walsheim-pro" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Личный кабинет</title>
+    <title>Карточка клиента</title>
   </head>
   <body>
     <header class="header">
@@ -24,11 +28,7 @@
           <div class="header__search">
             <form class="search-form" action="#">
               <img class="search-form__icon" src="images/search.svg" />
-              <input
-                class="search-form__input"
-                placeholder="Поиск по ключевому слову"
-                type="text"
-              />
+              <input class="search-form__input" placeholder="Поиск по ключевому слову" type="text" />
               <button class="search-form__btn">Искать</button>
             </form>
           </div>
@@ -42,47 +42,126 @@
           <a href="index.html" class="links__link">Главная</a>
           <a href="#" class="links__link">UX/UI Designers</a>
         </div>
-
       </div>
-
     </section>
     <section class="relations">
-        <div class="container">
-            <div class="relations__inner">
-                <img class="relations__img" src="images/opencard_pic1.png"></img>
-                <ul class="relations__box">
-                    <li class="relations__item">
-                        <h4 class="relations__item-title">Ciaran Jones</h4>
-                        <img src="images/flag-us.svg" alt="flag-us" class="relations__item-img">
-                    </li>
-                    <li class="relations__item">
-                        <p class="relations__item-text">A UX/UI Designer, </p>
-                        <p class="relations__item-text">5 year experience</p>
-                    </li>
-                    <li class="relations__item">
-                        <p class="relations__item-social__text">Связаться</p>
-                        <a href="#" class="relations__item-social__link">
-                            <img src="images/linkedin.svg" alt="linkedin" class="relations__item-social__img">
-                        </a>
-                        <a href="#" class="relations__item-social__link">
-                            <img src="images/telegram.svg" alt="telegram" class="relations__item-social__img">
-                        </a>
-                    </li>
-                    
-
-                </ul>
-                <div class="relations__buttons">
-                    <div class="relations__btn-like">
-                       
-                    </div>
-                    <div class="relations__btn-dropmenu">
-                        
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="relations__inner">
+          <img class="relations__img" src="images/opencard_pic1.png" />
+          <ul class="relations__box">
+            <li class="relations__item">
+              <h4 class="relations__item-title">Ciaran Jones</h4>
+              <img src="images/flag-us.svg" alt="flag-us" class="relations__item-img" />
+            </li>
+            <li class="relations__item">
+              <p class="relations__item-text">A UX/UI Designer,</p>
+              <p class="relations__item-text">5 year experience</p>
+            </li>
+            <li class="relations__item">
+              <p class="relations__item-social__text">Связаться</p>
+              <a href="#" class="relations__item-social__link">
+                <img src="images/linkedin.svg" alt="linkedin" class="relations__item-social__img" />
+              </a>
+              <a href="#" class="relations__item-social__link">
+                <img src="images/telegram.svg" alt="telegram" class="relations__item-social__img" />
+              </a>
+            </li>
+          </ul>
+          <div class="relations__buttons">
+            <div class="relations__btn-like"></div>
+            <div class="relations__btn-dropmenu"></div>
+          </div>
         </div>
+      </div>
     </section>
-    
+    <section class="card-tab">
+      <div class="container">
+        <div class="card-tabs">
+          <button class="card-tabs__link active" id="defaultOpen" onclick="openCardTab(event, 'about')">Обо мне</button>
+          <button class="card-tabs__link" onclick="openCardTab(event, 'reviews')">Отзывы</button>
+          <hr class="line" />
+        </div>
+        <div id="about" class="card-tabs__content">
+          <div class="card-tabs__top">
+            <div class="card-tabs__left">
+              <div class="card-tabs__left-info">
+                <p class="card-tabs__left-info__text">
+                  Hi! My name’s Ciaran. Creating good UX design has a lot in common with telling a good story. For more than a year I have
+                  been honing my professional UI/UX skills by learning and improving on my own and have successfully completed the UX/UI
+                  design course.
+                </p>
+              </div>
+              <ul class="card-tabs__left-list">
+                <li class="card-tabs__left-list__item">
+                  <h4 class="card-tabs__left-list__item-title">Hard skills</h4>
+                  <div class="card-tabs__left-list__item-skillbox">
+                    <p class="card-tabs__left-list__item-skill">Prototyping</p>
+                    <p class="card-tabs__left-list__item-skill">Design Thinking</p>
+                    <p class="card-tabs__left-list__item-skill">Wireframing</p>
+                  </div>
+                </li>
+
+                <li class="card-tabs__left-list__item">
+                  <h4 class="card-tabs__left-list__item-title">Soft skills</h4>
+                  <div class="card-tabs__left-list__item-skillbox">
+                    <p class="card-tabs__left-list__item-skill">Communication</p>
+                    <p class="card-tabs__left-list__item-skill">Empathy</p>
+                  </div>
+                </li>
+
+                <li class="card-tabs__left-list__item">
+                  <h4 class="card-tabs__left-list__item-title">Tools</h4>
+                  <div class="card-tabs__left-list__item-skillbox">
+                    <p class="card-tabs__left-list__item-skill">Figma</p>
+                    <p class="card-tabs__left-list__item-skill">Creative Suite</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-tabs__right"></div>
+          </div>
+          <div class="card-tabs__work">
+            <h4 class="card-tabs__work__title">Work Experience</h4>
+            <div class="card-tabs__work__content">
+              <div class="card-tabs__work__content-left">
+                <img src="images/workPic.png" alt="workpic" class="card-tabs__work__content-img" />
+                <div class="card-tabs__work__content-box">
+                  <p class="card-tabs__work__content-title">UX/UI Designer</p>
+                  <p class="card-tabs__work__content-text">General Assembly</p>
+                  <img class="card-tabs__work__content-textImg" alt="dot" src="images/dot.svg" />
+                  <p class="card-tabs__work__content-text">Apprenticeship</p>
+                </div>
+              </div>
+              <div class="card-tabs__work__content-right">
+                <p class="card-tabs__work__content-right__text">Dec 2020 — Present</p>
+                <a href="#" class="card-tabs__work__content-right__link">SHOW MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-tabs__work">
+            <h4 class="card-tabs__work__title">Education</h4>
+            <div class="card-tabs__work__content">
+              <div class="card-tabs__work__content-left">
+                <img src="images/workPic.png" alt="workpic" class="card-tabs__work__content-img" />
+                <div class="card-tabs__work__content-box">
+                  <p class="card-tabs__work__content-title">General Assembly</p>
+                  <p class="card-tabs__work__content-text">UI/UX Design</p>
+                  <img class="card-tabs__work__content-textImg" alt="dot" src="images/dot.svg" />
+                  <p class="card-tabs__work__content-text">Apprenticeship</p>
+                </div>
+              </div>
+              <div class="card-tabs__work__content-right">
+                <p class="card-tabs__work__content-right__text">Dec 2020 — Present</p>
+                <a href="#" class="card-tabs__work__content-right__link">SHOW MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="reviews" class="card-tabs__content">
+          <h1>REVIEWS</h1>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container">

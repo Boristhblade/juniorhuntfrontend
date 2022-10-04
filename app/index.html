@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная страница</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link
       href="http://fonts.cdnfonts.com/css/gt-walsheim-pro"
       rel="stylesheet"
@@ -29,7 +36,9 @@
           </div>
           <div class="header__search">
             <form class="search-form" action="#">
-              <img class="search-form__icon" src="images/search.svg" />
+              <a class="search-form__icon-search" href="#">
+                <img class="search-form__icon" src="images/search.svg" />
+              </a>
               <input
                 class="search-form__input"
                 placeholder="Поиск по ключевому слову"
@@ -430,7 +439,7 @@
                     <p class="card-bottom__tool">Curiosity</p>
                   </li>
                   <li class="card-bottom__item">
-                    <a href="#" class="card-bottom__show">Посмотреть весь профиль</a>
+                    <a href="opencard.html" class="card-bottom__show">Посмотреть весь профиль</a>
                   </li>
                 </ul>
               </div>

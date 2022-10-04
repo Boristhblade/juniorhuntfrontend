@@ -112,11 +112,7 @@
     margin-bottom: 19px;
   }
 }
-@media (max-width: 955px) {
-  .profile__main-work__content-workhidden {
-    // left: -40vh;
-  }
-}
+
 @media (max-width: 868px) {
   .blockquote {
     height: 100px;
@@ -371,6 +367,28 @@
       }
     }
   }
+  .search-form {
+    flex-direction: row-reverse;
+    &__btn {
+      display: none;
+    }
+    &__input {
+      padding-left: 6px;
+      margin-left: 2px;
+    }
+    &__icon {
+      padding: 22px 9px;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .header {
+    margin-bottom: 0;
+  }
+  .blockquote {
+    display: none;
+  }
 }
 @media (max-width: 509px) {
   .profile__main-work__content-eduhidden,
@@ -501,9 +519,18 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .header__search {
+    width: 289px;
+    // width: 100%;
+    height: 36px;
+  }
   .header__logo {
     order: -1;
     padding: 28px 22px 23px 30%;
+  }
+  .search-form {
+    justify-content: space-around;
+    width: 100%;
   }
   .logo__img {
     right: 38%;
@@ -513,7 +540,12 @@
   .header__account {
     // order: -1;
     // margin-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 0px;
+  }
+  .header__account-link {
+    padding: 11px 8px;
+    font-size: 12px;
+    line-height: 12px;
   }
   .search-form__icon {
     padding: 8px 7px;
@@ -571,6 +603,9 @@
   .profile__header-text {
     font-size: 22px;
     line-height: 24px;
+  }
+  .header__search {
+    width: 251px;
   }
 }
 @media (max-width: 409px) {
@@ -700,7 +735,10 @@
     bottom: -39px;
   }
 }
-@media (max-width: 385px) {
+@media (max-width: 380px) {
+  .header__search {
+    width: 224px;
+  }
 }
 @media (max-width: 370px) {
   .logo__img {
@@ -711,9 +749,25 @@
   .profile__main-workbtn {
     right: 53.7%;
   }
+  .header__search {
+    width: 209px;
+  }
+  .search-form__icon {
+    width: 71%;
+    padding: 2px 0px;
+    margin-right: 5px;
+  }
 }
 @media (max-width: 330px) {
   .logo__img {
     right: 36%;
+  }
+  .header__account {
+    margin-left: 4px;
+  }
+  .header__account-link {
+    padding: 11px 8px;
+    font-size: 10px;
+    line-height: 9px;
   }
 }
